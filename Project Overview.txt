@@ -1,8 +1,3 @@
-CSE 5330: Database Systems - Fall 2024
-
-Submitted by: Rajat Singh - 1002238010
-     	      Varad Nair  - 1002161475
-Professor: Ranjan Dash
 
 Project Overview
 ----------------
