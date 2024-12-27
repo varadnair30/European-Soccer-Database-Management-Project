@@ -1,0 +1,59 @@
+CSE 5330: Database Systems - Fall 2024
+
+Submitted by: Rajat Singh - 1002238010
+     	      Varad Nair  - 1002161475
+Professor: Ranjan Dash
+
+Project Overview
+----------------
+This project encompasses the creation, manipulation, and validation of a database for European soccer. The tasks include schema design, data insertion, and integrity constraint testing within an Oracle database environment.
+
+1. Database Schema Creation
+Procedure:-
+The tables for the SOCCER database were created using SQL scripts stored in a text file, executed through SQL*Plus. This part of the project was documented by capturing the SQL commands and their execution in a spool file.
+Spool Output for Table Creation (Q1.txt)
+
+
+2. Schema Diagram (Q2.png)
+The schema diagram visualizes the relationships and structure of the database, illustrating how the tables are interconnected through various keys and constraints.
+
+3. Data Loading
+Using Java programs, records from provided CSV files were loaded into each corresponding table in the database. These programs used JDBC to establish a connection with the Oracle database and execute SQL insert commands.
+Also, ojdbc JAR is also used.
+
+Data Loading Scripts:-
+
+LoadCountryData.java
+LoadLeagueData.java
+LoadMatchData.java
+LoadPATable.java
+LoadPlayerData.java
+LoadTeamAttribute.java
+LoadTeamData.java
+
+4. Integrity Constraint Violation Tests 
+A series of SQL INSERT commands were deliberately designed to violate different types of integrity constraints to test the database schema's robustness (spool file -> Q4.txt)
+
+Primary Key Violation(Key Constraints Violation):
+
+insert into country values(1,'Rajat');
+
+ERROR: ORA-00001: unique constraint (RXS8010.SYS_C00857131) violated
+
+Data Type Mismatch(Domain Constraints Violation) :
+insert into country values('rajat', 1);
+
+ERROR: ORA-01722: invalid number
+Entity Integrity Violation:
+insert into country values(NULL,'rajat');
+ERROR: ORA-01400: cannot insert NULL into ("RXS8010"."COUNTRY"."ID")
+
+All commands and errors were captured in a spool file, ensuring detailed documentation of each test.
+
+5. Deletion of Records Violating Referential Integrity
+Attempts to delete records that would cause referential integrity violations were made. The SQL commands and database responses are documented in the spool file(Q5.txt)
+
+
+6. Valid Record Insertions
+Three new records complying with all integrity constraints were successfully inserted into the database. The SQL commands and their execution details are documented in the spool file(Q6.txt)
+
