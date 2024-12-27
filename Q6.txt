@@ -1,0 +1,13 @@
+SQL> insert into country values(100, 'Rajat');
+
+1 row created.
+
+SQL> insert into country values(101, 'Varad');
+
+1 row created.
+
+SQL> insert into country values(102, 'Preet');
+
+1 row created.
+
+SQL> spool off

@@ -1,0 +1,36 @@
+SQL> insert into country values(1,'Rajat');
+insert into country values(1,'Rajat')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (RXS8010.SYS_C00857131) violated 
+
+
+SQL> insert into country values('1','Rajat');
+insert into country values('1','Rajat')
+*
+ERROR at line 1:
+ORA-00001: unique constraint (RXS8010.SYS_C00857131) violated 
+
+
+SQL> insert into country (ID, NAME) values( ,'rajat');
+insert into country (ID, NAME) values( ,'rajat')
+                                       *
+ERROR at line 1:
+ORA-00936: missing expression 
+
+
+SQL> insert into country values(NULL,'rajat');
+insert into country values(NULL,'rajat')
+                           *
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("RXS8010"."COUNTRY"."ID") 
+
+
+SQL> insert into country values('rajat',1);
+insert into country values('rajat',1)
+                           *
+ERROR at line 1:
+ORA-01722: invalid number 
+
+
+SQL> spool off

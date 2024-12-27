@@ -1,0 +1,25 @@
+SQL> DELETE FROM Country WHERE id = 101;
+DELETE FROM Country WHERE id = 101
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (RXS8010.SYS_C00857131) violated - child record 
+found 
+
+
+SQL> DELETE FROM Country WHERE id = 202;
+DELETE FROM Country WHERE id = 202
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (RXS8010.SYS_C00857131) violated - child record 
+found 
+
+
+SQL> DELETE FROM Country WHERE id = 203;
+DELETE FROM Country WHERE id = 203
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (RXS8010.SYS_C00857131) violated - child record 
+found 
+
+
+SQL> spool off

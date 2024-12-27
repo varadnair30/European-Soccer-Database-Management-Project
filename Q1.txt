@@ -1,0 +1,39 @@
+SQL> @home/rxs8010/soccer.sql
+SP2-0310: unable to open file "home/rxs8010/soccer.sql"
+SQL> @/home/rxs8010/soccer.sql
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+SQL> SELECT table_name FROM user_tables;
+
+TABLE_NAME                                                                      
+--------------------------------------------------------------------------------
+COUNTRY                                                                         
+LEAGUE                                                                          
+MATCH                                                                           
+PLAYER                                                                          
+PLAYER_ATTRIBUTES                                                               
+TEAM                                                                            
+TEAM_ATTRIBUTES                                                                 
+
+7 rows selected.
+
+SQL> spool off
